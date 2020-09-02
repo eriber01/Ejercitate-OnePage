@@ -1,0 +1,209 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* estilos de la pagina de inicio */
+header{
+    height: 100vh;
+    background-image: url('/img/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    margin-bottom: 100px;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+header nav ul li{
+    list-style: none;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    color: #272343;
+}
+
+header nav ul li .inicio{
+    font-size: 2.5rem;
+}
+
+
+.contacto{
+    display: block;
+    float: right;
+}
+.contacto li a{
+    color: black;
+
+}
+/* efecto hover sobre el menu */
+.menu-link{
+    position: relative;
+    outline: none;
+    border: none;
+}
+
+.menu-link::before,
+.menu-link::after{
+    border: 0 solid transparent;
+    transition: all 250ms;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+}
+
+.inicio::before{
+    border-top: 2px solid black;
+    right: 0px;
+    top: -5px;
+}
+
+.menu-link::after{
+    border-bottom: 2px solid black;
+    bottom: -5px;
+    left: 0px;
+}
+
+
+.menu-link:hover::before,
+.menu-link:hover::after{
+    height: 100%;
+    width: 100%;
+}
+
+/* estilos servicios */
+
+.servicio-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.servicio-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    position: absolute;
+    width: 4rem;
+    word-wrap: break-word;
+    text-align: center;
+    margin-left: 10px;
+    padding: 10px;
+    top: 150%;
+
+    border-radius: 5px;
+}
+
+.servicio-title h2{
+    font-size: 4rem;
+    color: white;
+}
+
+.card-servicios img{
+    border-radius: 5px;
+    margin: 35px;
+    width: 40%;
+    
+    box-shadow: 1px 1px 5px black;
+}
+
+.card-servicios{
+    padding-left: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card-servicios h4, h4{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+/* estilos del formulario de servicio */
+
+.form-title{
+    margin-top: 3rem;
+    margin-bottom: 2rem;    
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 70vh;
+    background-color: rgba(187, 209, 150, 0.9);
+    color: white;
+}
+
+
+form{
+    display: flex;
+    flex-flow: column;
+    width: 40%;
+    height: 80%;
+    padding: 20px;
+    background-color: rgb(187, 209, 150);
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 3px;
+    color: black;
+
+    transform: scale(1.09);
+}
+
+
+input, textarea, select{
+    outline: none;
+    border: none;
+    resize: none;
+    border-bottom: 1px solid #000;
+    width: 80%;
+    line-height: 40px;   
+    background-color: #bbd196;
+    color: black;
+}
+
+input::placeholder{
+    color: black;
+}
+
+textarea::placeholder{
+    color: black;
+}
+.enviar{
+    outline: none;
+    border: none;
+    color: white;
+    background: rgba(59, 52, 56, 0.8);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 2px 10px;
+    width: 30%;
+    margin-top: 1rem;
+    transition: all 300ms ease-in-out;
+}
+
+.enviar:hover{
+    transform: scale(1.05);
+}
