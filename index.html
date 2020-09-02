@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercitate YA!</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,19 +15,19 @@
         <nav>
             <ul>
                 <li>
-                    <a class="menu-link" href="#">Servicios</a>
+                    <a id="servicio-link" class="menu-link">Servicios</a>
                 </li>
                 <li>
-                    <a class="inicio menu-link" href="index.html">Inicio</a>
+                    <a id="reload" class="inicio menu-link">Inicio</a>
                 </li>
                 <li>
-                    <a class="menu-link" href="#">Nosotros</a>
+                    <a id="nosotros-link" class="menu-link" href="#">Nosotros</a>
                 </li>
             </ul>
             <br>
             <ul class="contacto">
                 <li>
-                    <a class="menu-link" href="#">Contactos</a>
+                    <a id="contact-link" class="menu-link">Contactos</a>
                 </li>
             </ul>
         </nav>
@@ -88,12 +88,13 @@
 
         <!-- formulario solicitud de servicios -->
 
-        <h4 class="form-title">Formulario de Servicio</h4>
-
         <div class="form-container">
+            <h4 class="form-title">Formulario de Servicio</h4>
+
             <form class="formulario" action="" autocomplete="off">
                 <input type="text" name="" id="nombre" placeholder="Nombre">
                 <input type="text" name="" id="apellido" placeholder="Apellidos">
+                <input type="email" name="" id="email" placeholder="Correo">
                 <input type="number" name="" id="telefono" placeholder="Telefono">
                 <br>
                 <label for="">Elija el tipo se Servicio</label>
@@ -104,7 +105,7 @@
                     <option value="masaje">Masajes</option>
                 </select>
 
-                <textarea name="" id="" cols="30" rows="10" placeholder="Descripcion sobre el servicio deseado"></textarea>
+                <textarea name="" id="" cols="0" rows="0" placeholder="Descripcion sobre el servicio deseado"></textarea>
 
                 <input class="enviar" type="submit" value="Enviar Formulario">
             </form>
@@ -112,68 +113,70 @@
     </section>
 
     <!-- seccion nosotros -->
-    <section class="nosotros">
+    <section style="height: 100vh;" class="nosotros">
         
-        <h2>Nosotros</h2>
+        <div class="nosotros-title">
+            <h2>Nosotros</h2>
+        </div>
+
+        <div class="origenes">
+            <h3>Origenes</h3>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id minus ab rerum fugiat asperiores voluptatibus. Culpa dolorem nesciunt quibusdam veniam minus porro sed, molestias provident cum laboriosam eius. Eius, non!</article>
+        </div>
 
         <div class="nosotros-container">
-            <div class="origenes">
-                <h3>Origenes</h3>
-                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, provident! Aperiam nemo officiis provident at atque sequi nisi.</article>
-            </div>
 
             <div class="mision">
                 <h3>Mision</h3>
-                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, provident! Aperiam nemo officiis provident at atque sequi nisi.</article>
+                <article>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis sapiente itaque harum ab similique, quos odit autem ratione! Quas recusandae nesciunt quaerat laudantium beatae minima. Expedita aliquam qui magnam magni.</article>
             </div>
 
             <div class="valores">
                 <h3>Valores</h3>
-                <article>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, provident! Aperiam nemo officiis provident at atque sequi nisi.</article>
+                <article>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus exercitationem facere explicabo ipsa voluptatibus id quidem eligendi sequi. Quas nisi enim deleniti corporis, reiciendis itaque praesentium illum consectetur? Numquam, porro?</article>
             </div>
         </div>
+    </section>
 
 
+<!-- boton ir hacia arriba -->
+<div class="up no-display-up" id="scroll-up">
+    <img src="img/ico/up2.png" style="width: 3rem;" alt="">
+</div>
+
+    <!-- seccion del footer -->
     <footer>
         <h4>Contactos</h4>
-
+        <div class="contactos-container">
+            
         <div class="tel">
-            <span>Telefono</span>
-            <span>###-###-####</span>
-            <span>###-###-####</span>
+            <h5>Oficinas</h4>
+            <br>
+            <span>809-123-4567</span>
+            <br>
+            <span class="especial">Horario de 8:00am a 5:00pm</span>
+            <br>
+            <span>ejemplo@gmail.com</span>
+            <br>
+            <span class="especial">Respodemos en un segundo</span>
+            <br>
+            <span class="especial"> Carretera Mella km 9 Santo Domingo</span>
+            <br>
+            <span class="especial">Republica Dominicana</span>
         </div>
 
         <div class="redes">
-            <h4>Red Social</h4>
+            <h5>Redes Sociales</h4>
             <br>
-            <div class="social-ico">
-                <div class="facebook">
-                    <a target="_blank" href="">
-                        <img src="" alt="">
-                    </a>
-                </div>
-
-                <div class="instagram">
-                    <a target="_blank" href="">
-                        <img src="" alt="">
-                    </a>
-                </div>
-
-                <div class="git">
-                    <a target="_blank" href="">
-                        <img src="" alt="">
-                    </a>
-                </div>
-
-                <div class="linkedin">
-                    <a target="_blank" href="">
-                        <img src="" alt="">
-                    </a>
-                </div>
-            </div>
+            <span>Facebook: Ejercitate YA!</span>
+            <br>
+            <span>Instagra: @ejercitateYA!</span>
+            <br>
+            <span>Youtube: Ejercitate YA!</span>
+        </div>
         </div>
     </footer>
 
-    </section>
+    <script src="main/main.js"></script>
 </body>
 </html>

@@ -32,6 +32,7 @@ header nav ul li a{
     font-size: 1.2rem;
 
     color: #272343;
+    cursor: pointer;
 }
 
 header nav ul li .inicio{
@@ -88,22 +89,22 @@ header nav ul li .inicio{
 .servicio-container{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .servicio-title{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     background-color: black;
     position: absolute;
+    left: 0;
     width: 4rem;
     word-wrap: break-word;
     text-align: center;
     margin-left: 10px;
     padding: 10px;
     top: 150%;
-
     border-radius: 5px;
 }
 
@@ -114,19 +115,32 @@ header nav ul li .inicio{
 
 .card-servicios img{
     border-radius: 5px;
-    margin: 35px;
     width: 40%;
-    
-    box-shadow: 1px 1px 5px black;
 }
 
 .card-servicios{
-    padding-left: 80px;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.568);
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.418);
+    transition: all 350ms ease-in-out;
+}
+
+.card-servicios:hover{
+    transform: scale(1.05);
+}
+.card-servicios article{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+    padding-left: 0.5em;
 }
 
 .card-servicios h4, h4{
@@ -135,12 +149,17 @@ header nav ul li .inicio{
     margin-bottom: 30px;
 }
 
+.servicio-descripcion h4{
+    text-decoration-line: underline;    
+}
+
 
 /* estilos del formulario de servicio */
 
 .form-title{
     margin-top: 3rem;
-    margin-bottom: 2rem;    
+    margin-bottom: 2rem;
+    color: black;    
 }
 .form-container{
     display: flex;
@@ -148,8 +167,8 @@ header nav ul li .inicio{
     justify-content: center;
     align-items: center;
     width: 100%; 
-    height: 70vh;
-    background-color: rgba(187, 209, 150, 0.9);
+    height: 80vh;
+    background-color: rgba(161, 161, 161, 0.1);
     color: white;
 }
 
@@ -158,16 +177,19 @@ form{
     display: flex;
     flex-flow: column;
     width: 40%;
-    height: 80%;
-    padding: 20px;
-    background-color: rgb(187, 209, 150);
+    height: 100%;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    background-color: rgba(0, 0, 0, 0.747);
     justify-content: center;
     align-items: center;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 3px;
-    color: black;
+    color: rgb(255, 255, 255);
 
     transform: scale(1.09);
+
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -175,19 +197,26 @@ input, textarea, select{
     outline: none;
     border: none;
     resize: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgb(245, 245, 245);
     width: 80%;
     line-height: 40px;   
-    background-color: #bbd196;
-    color: black;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
+select{
+    background-color: rgba(0, 0, 0, 0.603);
+}
 input::placeholder{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 textarea::placeholder{
-    color: black;
+    color: rgb(255, 255, 255);
+}
+
+label{
+    padding-bottom: 10px;
 }
 .enviar{
     outline: none;
@@ -206,4 +235,128 @@ textarea::placeholder{
 
 .enviar:hover{
     transform: scale(1.05);
+}
+
+
+/* estilos de la seccion nosotros */
+
+.nosotros{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    background-image: url(/img/nosotros.jpg);
+}
+
+.nosotros-title{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.623);
+    position: absolute;
+    right: 0;
+    width: 4rem;
+    word-wrap: break-word;
+    text-align: center;
+    margin-right: 20px;
+    padding: 20px;
+    top: 430%;
+    border-radius: 5px;
+}
+
+.nosotros-title h2{
+    font-size: 3rem;
+    color: white;
+}
+
+.nosotros h3{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.nosotros-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.origenes{
+    width: 40%;
+    height: 30%;
+}
+
+.mision, .valores{
+    width: 30%;
+    height: 110%;
+}
+
+.mision, .valores, .origenes{
+    border: 1px solid rgba(0, 0, 0, 0.062);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.233);
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* estilos de la seccion de contacto */
+
+footer{
+    height: 75vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+footer h4{
+    text-decoration-line: underline;
+    margin: 0;
+    padding-top: 1rem;
+    font-size: 3rem;
+}
+footer h5{
+    font-size: 2rem;
+}
+
+footer .contactos-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    line-height: 30px;
+}
+
+/*diseno button up inicio*/
+
+.up{
+    position: fixed;
+    bottom: 41%;
+    left: 95%;
+    background-color: rgba(0, 0, 0, 0.664);
+    border-radius: 100% 100% 10% 100%;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.up:hover{
+    transform: scale(1.09);
+    background-color: #000000;
+}
+
+.no-display-up{
+    display: none;
+}
+
+.display-up{
+    display: block;
 }
