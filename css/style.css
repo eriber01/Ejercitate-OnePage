@@ -360,3 +360,50 @@ footer .contactos-container{
 .display-up{
     display: block;
 }
+
+
+
+/* estilos del diseno resposive */
+
+@media only screen and (max-width: 600px){
+    .up{
+        bottom: 41%;
+        left: 85%;
+    }
+
+    /* reponsive servisio */
+    .card-servicios{
+        flex-direction: column;
+    }
+
+    .card-servicios img{
+        width: 100%;
+    }
+
+    .card-servicios article{
+        width: 100%;
+    }
+
+    .servicio-title{
+        margin: 0;
+        position: unset;
+        width: 80%;
+        word-wrap: normal;
+        top: unset;
+        margin-bottom: 1rem;
+    }
+
+    form{
+        width: 80%;
+    }
+
+    /* responsive origenes */
+
+    .nosotros-title{
+        margin: 0;
+        position: unset;
+        width: 80%;
+        background-color: black;
+        top: unset;
+    }
+}
