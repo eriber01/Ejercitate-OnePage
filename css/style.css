@@ -406,4 +406,13 @@ footer .contactos-container{
         background-color: black;
         top: unset;
     }
+
+
+
+
+    /* responsive contactos */
+
+    footer .contactos-container{
+        flex-direction: column;
+    }
 }
