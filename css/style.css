@@ -393,6 +393,9 @@ footer .contactos-container{
         margin-bottom: 1rem;
     }
 
+    .form-container{
+        margin: 10px;
+    }
     form{
         width: 80%;
     }
