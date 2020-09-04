@@ -396,12 +396,16 @@ footer .contactos-container{
     .form-container{
         margin: 10px;
     }
+
     form{
         width: 80%;
     }
 
-    /* responsive origenes */
+    /* responsive nosotros */
 
+    .nosotros{
+        margin-bottom: 10px;
+    }
     .nosotros-title{
         margin: 0;
         position: unset;
@@ -410,9 +414,19 @@ footer .contactos-container{
         top: unset;
     }
 
+    .origenes{
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
+    .nosotros-container{
+        flex-direction: column;
+    }
 
-
+    .mision, .valores{
+        width: 100%;
+        margin-bottom: 10px;
+    }
     /* responsive contactos */
 
     footer .contactos-container{
