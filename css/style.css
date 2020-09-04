@@ -7,7 +7,7 @@
 /* estilos de la pagina de inicio */
 header{
     height: 100vh;
-    background-image: url('/img/home.jpg');
+    background-image: url('../img/home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -263,7 +263,7 @@ label{
     text-align: center;
     margin-right: 20px;
     padding: 20px;
-    top: 430%;
+    /* top: 430%; */
     border-radius: 5px;
 }
 
