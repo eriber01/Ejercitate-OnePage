@@ -40,3 +40,17 @@ function Subir_o_Bajar(referecia, distacia){
         })
     })
 }
+
+
+//alerta del formulario
+
+const form = document.querySelector('#form')
+
+form.addEventListener('submit', (eve)=>{
+    eve.preventDefault()
+    swal("Good job!", "El formulario a sido enviado!", "success");
+    setTimeout(()=>{
+        window.location.reload()
+        form.reset()
+    },3000)
+})
