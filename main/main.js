@@ -1,7 +1,12 @@
-let servicio1 = document.getElementById('servicio1')
-let servicio2 = document.getElementById('servicio2')
-let servicio3 = document.getElementById('servicio3')
-let servicio4 = document.getElementById('servicio4')
+/* variables para controlar la aparicion con el scroll */
+const servicio1 = document.getElementById('servicio1')
+const servicio2 = document.getElementById('servicio2')
+const servicio3 = document.getElementById('servicio3')
+const servicio4 = document.getElementById('servicio4')
+const form_container = document.getElementById('form-translate')
+const mision = document.getElementById('mision')
+const origenes = document.getElementById('origenes')
+const valores = document.getElementById('valores')
 //recargar la pagina al hacer click en inicio
 
 const reload = document.getElementById('reload')
@@ -26,16 +31,18 @@ window.onscroll = function(){
 
     if(scroll > 300){
         translate(servicio1)
-        console.log('funciona 1');
     }if(scroll > 700){
         translate(servicio2)
-        console.log('funciona 2');
-    }if(scroll > 1000){
+    }if(scroll > 900){
         translate(servicio3)
-        console.log('funciona 3');
-    }if(scroll > 1500){
+    }if(scroll > 1200){
         translate(servicio4)
-        console.log('funciona 4');
+    }if(scroll > 1800){
+        translate(form_container)
+    }if(scroll > 2400){
+        translate(origenes)
+        translate(mision)
+        translate(valores)
     }
 }
 
