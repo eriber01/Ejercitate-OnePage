@@ -129,12 +129,29 @@ header nav ul li .inicio{
     margin: 1%;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.418);
-    transition: all 350ms ease-in-out;
+
+    opacity: 0;
+    transition: all 900ms ease-in-out;
+}
+
+#servicio1{
+    transform: translateX(-100%);
+}
+#servicio2{
+    transform: translateX(100%);
+}
+#servicio3{
+    transform: translateX(-100%);
+}
+#servicio4{
+    transform: translateX(100%);
 }
 
 .card-servicios:hover{
+    transition: all 350ms ease-in-out;
     transform: scale(1.05);
 }
+
 .card-servicios article{
     margin: auto;
     width: 50%;
@@ -432,4 +449,12 @@ footer .contactos-container{
     footer .contactos-container{
         flex-direction: column;
     }
+}
+
+
+/* estilos de los efectos de jsvascript */
+
+.transition{
+    opacity: 1;
+    transform: translateX(0%);
 }

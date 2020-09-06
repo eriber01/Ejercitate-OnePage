@@ -1,3 +1,7 @@
+let servicio1 = document.getElementById('servicio1')
+let servicio2 = document.getElementById('servicio2')
+let servicio3 = document.getElementById('servicio3')
+let servicio4 = document.getElementById('servicio4')
 //recargar la pagina al hacer click en inicio
 
 const reload = document.getElementById('reload')
@@ -10,13 +14,38 @@ reload.addEventListener('click', (eve)=>{
 
     //analiza el scroll para hacer visible el boton
 window.onscroll = function(){
+    let scroll = document.documentElement.scrollTop;
     
-    if(document.documentElement.scrollTop > 100){
+    console.log(scroll)
+    if(scroll > 100){
         document.querySelector('#scroll-up').classList.add('display-up');
     }else{
         document.querySelector('#scroll-up').classList.remove('display-up');
+    };
+
+
+    if(scroll > 300){
+        translate(servicio1)
+        console.log('funciona 1');
+    }if(scroll > 700){
+        translate(servicio2)
+        console.log('funciona 2');
+    }if(scroll > 1000){
+        translate(servicio3)
+        console.log('funciona 3');
+    }if(scroll > 1500){
+        translate(servicio4)
+        console.log('funciona 4');
     }
 }
+
+//funcion para el transition
+
+function translate(variable){
+    variable.style.transform = 'translateX(0%)'
+    variable.style.opacity = '1'
+}
+
 
 //boton arriba
 Subir_o_Bajar('#scroll-up', 0)
