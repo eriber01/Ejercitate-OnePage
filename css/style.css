@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* heroku */
 html{
     scroll-behavior: smooth;
 }
