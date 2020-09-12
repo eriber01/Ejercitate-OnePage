@@ -28,25 +28,9 @@ window.onscroll = function(){
         document.querySelector('#scroll-up').classList.remove('display-up');
     };
 
-
-    if(scroll > 300){
-        translate(servicio1)
-    }if(window.outerWidth < 1050){
-        if(scroll > 700){
-            translate(servicio2)
-        }if(scroll > 900){
-            translate(servicio3)
-        }if(scroll > 1200){
-            translate(servicio4)
-        }if(scroll > 1800){
-            translate(form_container)
-        }if(scroll > 2400){
-            translate(origenes)
-            translate(mision)
-            translate(valores)
-        }
-    }else{
-        if(scroll > 700){
+        if(scroll > 300){
+            translate(servicio1)
+        }if(scroll > 700){
             translate(servicio2)
         }if(scroll > 900){
             translate(servicio3)
@@ -60,7 +44,6 @@ window.onscroll = function(){
             translate(valores)
         }
     }
-}
 
 //funcion para el transition
 
@@ -73,7 +56,9 @@ function translate(variable){
 //boton arriba
 Subir_o_Bajar('#scroll-up', 0)
 
-//boton ir a servisios
+//scroll cambiado a html y css para mejorar el responsive
+
+/* //boton ir a servisios
 Subir_o_Bajar('#servicio-link', 625)
 
 //boton ir a contactos
@@ -89,7 +74,7 @@ if(window.outerWidth < 1050){
     //boton ir a nosotros escritorio
     Subir_o_Bajar('#nosotros-link', 2616)
 
-}
+} */
 
 //logica de subir o bajar
 function Subir_o_Bajar(referecia, distacia){
