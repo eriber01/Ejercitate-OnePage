@@ -31,18 +31,34 @@ window.onscroll = function(){
 
     if(scroll > 300){
         translate(servicio1)
-    }if(scroll > 700){
-        translate(servicio2)
-    }if(scroll > 900){
-        translate(servicio3)
-    }if(scroll > 1200){
-        translate(servicio4)
-    }if(scroll > 1800){
-        translate(form_container)
-    }if(scroll > 2400){
-        translate(origenes)
-        translate(mision)
-        translate(valores)
+    }if(window.outerWidth < 1050){
+        if(scroll > 700){
+            translate(servicio2)
+        }if(scroll > 900){
+            translate(servicio3)
+        }if(scroll > 1200){
+            translate(servicio4)
+        }if(scroll > 1800){
+            translate(form_container)
+        }if(scroll > 2400){
+            translate(origenes)
+            translate(mision)
+            translate(valores)
+        }
+    }else{
+        if(scroll > 700){
+            translate(servicio2)
+        }if(scroll > 900){
+            translate(servicio3)
+        }if(scroll > 1200){
+            translate(servicio4)
+        }if(scroll > 1800){
+            translate(form_container)
+        }if(scroll > 2400){
+            translate(origenes)
+            translate(mision)
+            translate(valores)
+        }
     }
 }
 
@@ -60,12 +76,20 @@ Subir_o_Bajar('#scroll-up', 0)
 //boton ir a servisios
 Subir_o_Bajar('#servicio-link', 625)
 
-//boton ir a nosotros
-Subir_o_Bajar('#nosotros-link', 2616)
-
 //boton ir a contactos
 Subir_o_Bajar("#contact-link", 9999999999999999999)
 
+if(window.outerWidth < 1050){
+    
+    //boton ir a nosotros movil
+    Subir_o_Bajar('#nosotros-link', 3441)
+
+}else{
+
+    //boton ir a nosotros escritorio
+    Subir_o_Bajar('#nosotros-link', 2616)
+
+}
 
 //logica de subir o bajar
 function Subir_o_Bajar(referecia, distacia){
